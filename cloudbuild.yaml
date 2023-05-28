@@ -5,15 +5,10 @@ steps:
       [
         "build",
         "-t",
-        "us-west1-docker.pkg.dev/gcr.io/${PROJECT_ID}/calculator:$COMMIT_SHA,
+        "us-west1-docker.pkg.dev/gcr.io/${PROJECT_ID}/calculator:$COMMIT_SHA",
         ".",
       ]
 
-# Docker Push
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/${PROJECT_ID}/calculator:$COMMIT_SHA']
-
-  
-
-  
-
+  # Docker Push
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["push", "gcr.io/${PROJECT_ID}/calculator:$COMMIT_SHA"]
