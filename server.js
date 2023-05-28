@@ -72,7 +72,7 @@ app.post('/login', (req, res) => {
 });
 
 app.get('/',(req,res) => {
-    res.send("Welcome to calculator app");
+    res.send("Welcome to Jason's calculator app ");
 });
 
 // Addidtion. add /add/x/x values together.
