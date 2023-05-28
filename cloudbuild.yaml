@@ -13,7 +13,7 @@ steps:
         "set",
         "image",
         "deployment/calculator-deployment",
-        "mynode=gcr.io/sit323-23t1-kingsbury-37a7a8c/calculator:$COMMIT_SHA",
+        "calculator=gcr.io/sit323-23t1-kingsbury-37a7a8c/calculator:$COMMIT_SHA",
       ]
     env:
       - "CLOUDSDK_COMPUTE_ZONE=us-west1"
