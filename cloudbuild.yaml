@@ -1,13 +1,7 @@
-# Cuild Docker Image
 steps:
+  # Build Docker Image
   - name: "gcr.io/cloud-builders/docker"
-    args:
-      [
-        "build",
-        "-t",
-        "us-west1-docker.pkg.dev/gcr.io/${PROJECT_ID}/calculator:$COMMIT_SHA",
-        ".",
-      ]
+    args: ["build", "-t", "gcr.io/${PROJECT_ID}/calculator:$COMMIT_SHA", "."]
 
   # Docker Push
   - name: "gcr.io/cloud-builders/docker"
